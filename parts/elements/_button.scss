@@ -1,0 +1,18 @@
+@import '../variables/index';
+
+.wp-block-button
+{
+    .wp-block-button__link
+    {
+        font-size: 15px;
+        font-weight: bold;
+
+        padding: .5em calc(1.333em + 2px);
+
+        text-transform: uppercase;
+
+        color: $color__blue-dk;
+        border-radius: 0;
+        background-color: $color__yellow;
+    }
+}

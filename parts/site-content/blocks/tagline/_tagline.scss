@@ -1,0 +1,85 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-tagline
+{
+    border-bottom: 1px solid #cc8c2a;
+
+    @include block-container-margins;
+
+    .seal-icon
+    {
+        font-family: $font__main;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.1em;
+
+        display: flex;
+
+        width: 194px;
+        height: 194px;
+        margin-right: auto;
+        margin-bottom: 30px;
+        margin-left: auto;
+
+        color: $color__blue-dk;
+        background: url('../parts/site-content/blocks/tagline/seal.svg') no-repeat center center;
+        background-size: 194px 194px;
+
+        align-items: center;
+        justify-content: center;
+
+        span
+        {
+            padding: 20px;
+
+            text-align: center;
+        }
+    }
+
+    .tagline-text
+    {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 28px;
+        line-height: 42px;
+
+        margin-bottom: 30px;
+
+        h2:first-child
+        {
+            font-size: 50px;
+
+            text-transform: none;
+        }
+
+        :first-child
+        {
+            margin-top: 0;
+        }
+    }
+}
+
+@include bp($breakpoint__md)
+{
+    .esports-certificate-block-tagline
+    {
+        display: flex;
+
+        .seal-icon
+        {
+            min-width: 194px;
+            margin-right: 45px;
+            margin-left: 0;
+        }
+
+        .tagline-text
+        {
+            font-size: 30px;
+
+            h2
+            {
+                font-size: 65px;
+            }
+        }
+    }
+}

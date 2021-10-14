@@ -1,0 +1,80 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-career-choices
+{
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    background-color: $color__yellow;
+
+    @include block-container-margins;
+    @include override-margin-with-padding;
+
+    .course-career-choices-heading
+    {
+        margin-top: 0;
+    }
+
+    .career-choices-wrapper
+    {
+        .esports-certificate-block-career-choice
+        {
+            margin-bottom: 20px;
+            padding: 45px 24px;
+
+            text-align: center;
+
+            background-color: #fff;
+
+            h3.career-choice-heading
+            {
+                font-family: $font__main;
+                font-weight: bold;
+
+                margin-top: 0;
+                margin-bottom: 12px;
+            }
+
+            p
+            {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@include bp($breakpoint__md)
+{
+    .esports-certificate-block-career-choices
+    {
+        .career-choices-wrapper
+        {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 16px;
+
+            .esports-certificate-block-career-choice
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@include bp($breakpoint__lg)
+{
+    .esports-certificate-block-career-choices
+    {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .career-choices-wrapper
+        {
+            column-gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}

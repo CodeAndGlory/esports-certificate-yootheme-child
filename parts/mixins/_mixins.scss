@@ -1,0 +1,120 @@
+@import '../variables/index';
+
+// Center block
+@mixin center-block
+{
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Clearfix
+@mixin clearfix
+{
+    display: table;
+
+    table-layout: fixed;
+
+    content: '';
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after
+{
+    clear: both;
+}
+
+// Breakpoints
+@mixin bp($sizeValue)
+{
+    @media screen and (min-width: $sizeValue)
+    {
+        @content;
+    }
+}
+
+@mixin universal-padding
+{
+    padding-right: $padding__mobile;
+    padding-left: $padding__mobile;
+
+    @include bp($breakpoint__md)
+    {
+        padding-right: $padding__tablet;
+        padding-left: $padding__tablet;
+    }
+}
+
+@mixin override-margin
+{
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @include bp($breakpoint__sm)
+    {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    @include bp($breakpoint__md)
+    {
+        margin-right: -40px;
+        margin-left: -40px;
+    }
+    @include bp(1366px)
+    {
+        margin-right: -83px;
+        margin-left: -83px;
+    }
+}
+
+@mixin override-margin-with-padding
+{
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include bp($breakpoint__sm)
+    {
+        margin-right: -20px;
+        margin-left: -20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @include bp($breakpoint__md)
+    {
+        margin-right: -40px;
+        margin-left: -40px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include bp(1366px)
+    {
+        margin-right: -83px;
+        margin-left: -83px;
+        padding-right: 83px;
+        padding-left: 83px;
+    }
+}
+
+@mixin block-container-margins
+{
+    margin-top: $container_margin;
+    margin-bottom: $container_margin;
+}
+
+@mixin universal-max-width
+{
+    @include bp($breakpoint__lg)
+    {
+        max-width: $breakpoint__lg;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@mixin universal-bottom-margin
+{
+    margin-bottom: $margin__bottom;
+}

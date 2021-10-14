@@ -1,0 +1,23 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-with-background
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: #ebebeb;
+
+    @include block-container-margins;
+    @include override-margin-with-padding;
+
+    :first-child
+    {
+        margin-top: 0;
+    }
+
+    :last-child
+    {
+        margin-bottom: 0;
+    }
+}

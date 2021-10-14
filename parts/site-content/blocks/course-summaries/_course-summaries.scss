@@ -1,0 +1,141 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-course-summaries
+{
+    @include block-container-margins;
+
+    .esports-certificate-block-course-summary
+    {
+        overflow: hidden;
+
+        margin-bottom: 28px;
+        padding: 50px 30px 0 30px;
+
+        background-color: #ebebeb;
+
+        .course-summary-heading
+        {
+            margin-top: 0;
+            margin-bottom: 22px;
+        }
+
+        .duration-cost
+        {
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 1.2;
+
+            display: inline-block;
+
+            margin-right: 6px;
+            margin-bottom: 50px;
+            margin-left: 6px;
+            padding: 7px 20px;
+
+            transform: skewX(-15deg);
+
+            color: #000;
+            background-color: $color__yellow;
+
+            & > span
+            {
+                display: inline-block;
+
+                transform: skewX(15deg);
+            }
+        }
+
+        .course-summary
+        {
+            margin-bottom: 50px;
+        }
+
+        hr.course-summary-divider
+        {
+            margin: 0 0 50px 0;
+
+            border: 0;
+            border-top: 1px solid #ca8b36;
+        }
+
+        .instructor-blurb-wrapper
+        {
+            display: flex;
+
+            margin-bottom: 50px;
+
+            .profile-pics
+            {
+                img
+                {
+                    min-width: 100px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .instructor-blurb
+            {
+                margin-top: 0;
+            }
+        }
+
+        .instructor-blurb-wrapper.more-than-one-profile-pics
+        {
+            display: block;
+        }
+
+        .course-link
+        {
+            margin-bottom: 50px;
+
+            a
+            {
+                font-size: 17px;
+                font-weight: bold;
+
+                display: inline-block;
+
+                padding: 0 30px;
+
+                text-decoration: none;
+                text-transform: uppercase;
+
+                color: #000;
+                background-color: $color__yellow;
+
+                &:hover,
+                &:focus
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@include bp($breakpoint__md)
+{
+    .esports-certificate-block-course-summaries
+    {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 28px;
+
+        .esports-certificate-block-course-summary
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include bp($breakpoint__lg)
+{
+    .esports-certificate-block-course-summaries
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

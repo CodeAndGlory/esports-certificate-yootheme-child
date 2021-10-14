@@ -1,0 +1,26 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-did-you-know
+{
+    font-size: 32px;
+    line-height: 40px;
+
+    padding-bottom: 146px + 40px;
+
+    background: url('../parts/site-content/blocks/did-you-know/uncg-online.svg') no-repeat 0 bottom;
+
+    @include block-container-margins;
+}
+
+@include bp($breakpoint__sm)
+{
+    .esports-certificate-block-did-you-know
+    {
+        min-height: 146px;
+        padding-bottom: 0;
+        padding-left: 174px + 40px;
+
+        background-position: top left;
+    }
+}

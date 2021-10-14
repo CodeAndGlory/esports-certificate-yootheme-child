@@ -1,0 +1,118 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-overview
+{
+    font-family: $font__secondary;
+    font-size: 17px;
+    line-height: 32px;
+
+    padding-top: 33px;
+    padding-bottom: 50px;
+
+    color: #fff;
+    background-color: $color__blue-dk;
+    background-size: cover;
+
+    @include block-container-margins;
+    @include override-margin-with-padding;
+
+    h2
+    {
+        font-size: 40px;
+
+        margin-top: 0;
+
+        text-transform: none;
+
+        color: #fff;
+    }
+
+    .esports-certificate-block-overview-box-wrapper
+    {
+        margin-top: 90px;
+        .esports-certificate-block-overview-box
+        {
+            position: relative;
+
+            margin-bottom: 74px;
+            padding: 50px 13px 30px;
+
+            text-align: center;
+
+            color: $color__blue-dk;
+            background-color: #fff;
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+
+            .esports-certificate-block-overview-box-icon
+            {
+                position: absolute;
+                top: 0;
+                left: 50%;
+
+                display: flex;
+
+                width: 94px;
+                height: 94px;
+
+                transform: translate(-50%, -50%);
+
+                border-radius: 50%;
+                background-color: #fff;
+
+                align-items: center;
+                justify-content: center;
+
+                svg
+                {
+                    width: 45%;
+
+                    fill: $color__blue-dk;
+                }
+            }
+        }
+    }
+}
+
+@include bp($breakpoint__sm)
+{
+    .esports-certificate-block-overview
+    {
+        padding-top: 50px;
+        padding-bottom: 0;
+        .esports-certificate-block-overview-box-wrapper
+        {
+            display: grid;
+
+            grid-gap: 20px;
+            grid-template-columns: 2fr 2fr;
+
+            .esports-certificate-block-overview-box:last-child
+            {
+                margin-bottom: 74px;
+            }
+        }
+    }
+}
+
+@include bp($breakpoint__md)
+{
+    .esports-certificate-block-overview
+    {
+        padding-top: 52px;
+
+        .esports-certificate-block-overview-box-wrapper
+        {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            .esports-certificate-block-overview-box
+            {
+                //
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import '../variables/_index';
+
+a
+{
+    text-decoration: underline;
+
+    color: $color__link;
+
+    &:active,
+    &:focus,
+    &:hover
+    {
+        text-decoration: none;
+
+        color: $color__link;
+    }
+
+    &:focus
+    {
+        outline: thin dotted;
+    }
+}

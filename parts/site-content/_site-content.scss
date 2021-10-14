@@ -1,0 +1,48 @@
+@import '../mixins/index';
+@import '../variables/index';
+
+.tm-main
+{
+    padding-top: 0;
+    padding-bottom: 70px;
+}
+
+.home .uk-article-title
+{
+    display: none;
+}
+
+* + .uk-margin-medium
+{
+    margin-top: 0 !important;
+}
+
+.uk-margin-medium > .esports-certificate-block-hero:first-child
+{
+    margin-top: 0;
+}
+
+.uk-article-title
+{
+    font-family: $font__headings;
+    font-size: 65px;
+
+    display: flex;
+
+    min-height: 168px;
+    margin-bottom: 50px;
+
+    border-bottom: 1px solid $color__yellow;
+
+    align-items: center;
+}
+
+.no-top-margin
+{
+    margin-top: 0;
+}
+
+.no-bottom-margin
+{
+    margin-bottom: 0;
+}

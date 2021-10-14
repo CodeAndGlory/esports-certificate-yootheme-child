@@ -1,0 +1,59 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.wp-block-pullquote
+{
+    margin-bottom: 0;
+
+    color: $color__blue-dk;
+    background-color: #ebebeb;
+
+    @include block-container-margins;
+    @include override-margin-with-padding;
+
+    blockquote
+    {
+        margin-bottom: 0;
+    }
+
+    &:not(.is-style-solid-color)
+    {
+        background: #ebebeb;
+    }
+
+    &.is-style-default blockquote,
+    &.is-style-solid-color blockquote
+    {
+        font-family: $font__main;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.5;
+
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 54px 40px;
+
+        text-align: center;
+        text-transform: none;
+
+        color: #0f2044;
+        border-left: 0;
+        background-color: #fff;
+
+        p
+        {
+            font-size: 32px;
+        }
+
+        cite
+        {
+            font-size: 17px;
+            font-style: normal;
+
+            display: block;
+
+            margin-top: 15px;
+        }
+    }
+}

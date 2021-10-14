@@ -1,0 +1,68 @@
+@import '../../mixins/index';
+@import '../../variables/index';
+
+.search-wrapper
+{
+    position: relative;
+}
+
+.uk-search-default .uk-search-input:focus
+{
+    background-color: #fff;
+}
+
+.search-button
+{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+
+    border: 0;
+    border-radius: 50%;
+    background-color: transparent;
+
+    &:active,
+    &:focus,
+    &:hover
+    {
+        background-color: $color__blue-dk;
+
+        svg
+        {
+            .st0
+            {
+                fill: #fff;
+            }
+        }
+    }
+
+    svg
+    {
+        overflow: visible;
+
+        width: 16.701px;
+        height: 20.037px;
+    }
+}
+
+.search-box
+{
+    position: absolute;
+    z-index: 1000;
+    top: 64px;
+    right: 0;
+
+    display: none;
+
+    width: 350px;
+
+    .uk-search-input
+    {
+        width: 350px;
+
+        transition: none;
+
+        border: 2px $color__blue-dk solid;
+        background-color: #fff;
+    }
+}

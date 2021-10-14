@@ -1,0 +1,102 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-contact-form-wrapper
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background: $color__yellow;
+
+    @include block-container-margins;
+    @include override-margin-with-padding;
+
+    & > :first-child
+    {
+        margin-top: 0;
+    }
+
+    .form-wrapper
+    {
+        padding: 40px;
+
+        background: #fff;
+
+        .form-wrapper-seal
+        {
+            font-family: $font__main;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.1em;
+
+            display: flex;
+
+            width: 194px;
+            height: 194px;
+            margin-bottom: 25px;
+
+            color: #fff;
+            background: url('../parts/site-content/blocks/contact-form-wrapper/seal.svg') no-repeat center center;
+            background-size: 194px 194px;
+
+            align-items: center;
+            justify-content: center;
+
+            span
+            {
+                padding: 20px;
+
+                text-align: center;
+            }
+        }
+
+        .form-wrapper-content
+        {
+            & > :first-child
+            {
+                margin-top: 0;
+            }
+
+            .hbspt-form
+            {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.hs-form-field label span
+{
+    font-size: 17px !important;
+
+    display: none;
+}
+
+@include bp($breakpoint__md)
+{
+    .esports-certificate-block-contact-form-wrapper
+    {
+        .form-wrapper
+        {
+            position: relative;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5
+            {
+                clear: none;
+            }
+
+            .form-wrapper-seal
+            {
+                //position: absolute;
+                float: right;
+
+                margin-top: -137px;
+                margin-right: 0;
+            }
+        }
+    }
+}

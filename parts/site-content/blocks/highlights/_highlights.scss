@@ -1,0 +1,53 @@
+@import '../../../mixins/index';
+@import '../../../variables/index';
+
+.esports-certificate-block-highlights
+{
+    @include block-container-margins;
+
+    .esports-certificate-block-highlight-box
+    {
+        font-family: $font__main;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 44px;
+
+        margin-bottom: 20px;
+        padding: 30px;
+
+        text-align: center;
+
+        color: #fff;
+        background-color: $color__blue-dk;
+        background-size: cover;
+    }
+}
+
+@include bp($breakpoint__sm)
+{
+    .esports-certificate-block-highlights
+    {
+        display: grid;
+
+        grid-gap: 20px;
+        grid-template-columns: auto auto;
+
+        .esports-certificate-block-highlight-box
+        {
+            display: flex;
+
+            margin-bottom: 0;
+
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@include bp($breakpoint__md)
+{
+    .esports-certificate-block-highlights
+    {
+        grid-template-columns: auto auto auto;
+    }
+}
